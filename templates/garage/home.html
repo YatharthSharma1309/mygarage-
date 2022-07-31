@@ -8,14 +8,13 @@
 <br>
 <br>
 
-    <div class="container">
 
     {% for o in obj %}
         {{o.user.username}}
         {{o.vehicle.name}}
         
         <form action="service/services/{{o.vehicle.id}}" method='post' >{% csrf_token %}
-            <button type="submit" class="btn btn-success">Get Services</button>
+            <button type="submit" >Get Services</button>
       
           </form>
         <br>

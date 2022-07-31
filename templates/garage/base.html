@@ -27,49 +27,26 @@
    
 
   {% if user.is_authenticated %}
-    <nav>
-        <div class="logo"></div>
-        <ul>
+  
           <li><a href="/home">Home</a></li>
           <li><a href="/booking">My Booking</a></li>
           <li><a href="/myvehicle">My Vehicle</a></li>
           <li><a href="#">HI &nbsp; {{ user.first_name}}</a></li>
           <li><a href="/account">Account</a></li>
           <li><a href="/accounts/logout" >Logout</a></li>
-          li><a href="/booking/cart" >My Cart</a></li>
+          <li><a href="/booking/cart" >My Cart</a></li>
           <li><a href="/admin" >Admin</a></li>
-        </ul>
-      </nav>
-      <header>
-        <div class="headline">
-          <div class="inner">
-            <h1>My Garage</h1>
-            <p>Scroll down the page</p>
-          </div>
-        </div>
-      </header>
+      
     
 
 {% else %}
 
-        <nav>
-          <div class="logo"></div>
-          <ul>
             <li><a href="/home">Home</a></li>
             <li><a href="/booking">My Booking</a></li>
             <li><a href="/accounts/login" >Login</a></li>
             <li><a href="/accounts/register" >Register</a></li>
             <!-- <li><a href="/admin" >Admin</a></li> -->
-          </ul>
-        </nav>
-        <header>
-          <div class="headline">
-            <div class="inner">
-              <h1>My Garage</h1>
-              <p>Scroll down the page</p>
-            </div>
-          </div>
-        </header>
+        
 
 {% endif %}
 
