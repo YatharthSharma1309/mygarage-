@@ -1,0 +1,42 @@
+{% extends 'garage/base.html'%}
+{% block content %}
+
+
+
+
+{% for v in vehi %}
+
+    {% if v.image %}
+    <img src="{{v.image.url}}" class="card-img-top" alt="...">
+    {% endif %}
+          {{v.name}}
+
+      <form action="/add/{{v.id}}" method='post' enctype="multipart/form-data" >{% csrf_token %}
+      <button type="submit" class="btn btn-success">Select</button>
+
+    </form>
+  
+    </div>
+  </div>
+
+
+
+  
+    {% endfor %}
+
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+{% endblock content %}
+
+

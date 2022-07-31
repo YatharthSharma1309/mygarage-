@@ -1,0 +1,464 @@
+@charset "UTF-8";
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:300,400,700);
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Open Sans", sans-serif;
+  color: #333;
+}
+
+header {
+  background: #111;
+}
+
+.headline {
+  position: relative;
+  height: 400px;
+  color: #fff;
+  text-align: center;
+  background: url("https://media.istockphoto.com/photos/close-up-of-red-metallic-car-paint-surface-wallpaper-background-picture-id1305301631?k=20&m=1305301631&s=612x612&w=0&h=75r2AjXfGX6_ZCIQ7CHIFAYCW901p3yQ0gLvtLvhbQI=") no-repeat center center;
+  background-size: cover;
+}
+.headline:after {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(17, 17, 17, 0.5);
+}
+
+.inner {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  opacity: 0;
+  z-index: 10;
+  transform: translateX(-50%) translateY(-50%);
+  -webkit-animation: fade-in 0.75s 0.25s ease-in forwards;
+          animation: fade-in 0.75s 0.25s ease-in forwards;
+}
+.inner h1 {
+  margin: 0;
+  font-size: 4em;
+  line-height: 1.2em;
+}
+.inner p {
+  margin: 0;
+  font-size: 1.4em;
+  font-style: italic;
+  font-family: serif;
+}
+
+nav {
+  position: fixed;
+  width: 100%;
+  z-index: 10;
+}
+nav.scrolled {
+  background: rgba(17, 17, 17, 0.9);
+}
+nav ul {
+  float: right;
+  list-style: none;
+  padding: 25px;
+  margin: 0;
+}
+nav li {
+  float: left;
+}
+nav a {
+  font-size: 0.9em;
+  color: #fff;
+  text-decoration: none;
+  margin: 5px 0 0 20px;
+  display: block;
+}
+nav a:hover {
+  color: #ededed;
+}
+
+.logo {
+  height: 75px;
+  float: left;
+}
+.logo:before, .logo:after {
+  position: absolute;
+  font-size: 7em;
+  font-weight: 300;
+  line-height: 0;
+  color: #fff;
+  top: 25px;
+}
+.logo:before {
+  content: "g";
+  left: 20px;
+}
+.logo:after {
+  content: "g";
+  left: 34px;
+}
+
+section {
+  width: 100%;
+  margin: 25px auto;
+  padding: 20px;
+  max-width: 800px;
+  font-size: 1.2em;
+  line-height: 1.6em;
+  box-sizing: border-box;
+}
+
+@-webkit-keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+
+/* ################################################################ */
+/* ################################################################ */
+/* ################################################################ */
+/* #########################___welcome page___################################### */
+
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@600;700&display=swap");
+
+
+.page-contain {
+    display: flex;
+
+    align-items: center;
+    
+  
+    font-family: "Open Sans", sans-serif;
+  }
+  
+
+.data-card {
+  display: flex;
+  flex-direction: column;
+  max-width: 100em;
+  min-height: 10em;
+  overflow: hidden;
+  border-radius: 0.5em;
+  text-decoration: none;
+  background: white;
+  margin: 1em;
+  padding: 2.75em 2.5em;
+  box-shadow: 0 1.5em 2.5em -0.5em rgba(0, 0, 0, 0.1);
+  transition: transform 0.45s ease, background 0.45s ease;
+}
+.data-card h3 {
+  color: #2E3C40;
+  font-size: 3.5em;
+  font-weight: 600;
+  line-height: 1;
+  padding-bottom: 0.5em;
+  margin: 0 0 0.142857143em;
+  border-bottom: 2px solid #a72323;
+  transition: color 0.45s ease, border 0.45s ease;
+}
+.data-card h4 {
+  color: #627084;
+  text-transform: uppercase;
+  font-size: 1.125em;
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: 0.1em;
+  margin: 0 0 1.777777778em;
+  transition: color 0.45s ease;
+}
+.data-card p {
+  opacity: 0;
+  color: #FFFFFF;
+  font-weight: 600;
+  line-height: 1.8;
+  margin: 0 0 1.25em;
+  transform: translateY(-1em);
+  transition: opacity 0.45s ease, transform 0.5s ease;
+}
+.data-card .link-text {
+  display: block;
+  color: #a10f0f;
+  font-size: 1.125em;
+  font-weight: 600;
+  line-height: 1.2;
+  margin: auto 0 0;
+  transition: color 0.45s ease;
+}
+.data-card .link-text svg {
+  margin-left: 0.5em;
+  transition: transform 0.6s ease;
+}
+.data-card .link-text svg path {
+  transition: fill 0.45s ease;
+}
+.data-card:hover {
+  background: #3bbd62;
+  transform: scale(1.02);
+}
+.data-card:hover h3 {
+  color: #FFFFFF;
+  border-bottom-color: #A754C4;
+}
+.data-card:hover h4 {
+  color: #FFFFFF;
+}
+.data-card:hover p {
+  opacity: 1;
+  transform: none;
+}
+.data-card:hover .link-text {
+  color: #FFFFFF;
+}
+.data-card:hover .link-text svg {
+  -webkit-animation: point 1.25s infinite alternate;
+          animation: point 1.25s infinite alternate;
+}
+.data-card:hover .link-text svg path {
+  fill: #FFFFFF;
+}
+
+@-webkit-keyframes point {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(0.125em);
+  }
+}
+
+@keyframes point {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(0.125em);
+  }
+}
+
+
+/* ################################################################ */
+/* ################################################################ */
+/* ################################################################ */
+/* #########################___Button hone ___################################### */
+
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
+
+.base {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(30, 1fr);
+  grid-template-rows: repeat(10, 1fr);
+  width: 210px;
+  height: 70px;
+  border-radius: 3px;
+  color: #fff;
+  background: #027ad6;
+  font: 700 24px sans-serif;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.07), 0 2px 4px rgba(0, 0, 0, 0.07), 0 4px 8px rgba(0, 0, 0, 0.07), 0 8px 16px rgba(0, 0, 0, 0.07), 0 16px 32px rgba(0, 0, 0, 0.07), 0 32px 64px rgba(0, 0, 0, 0.07);
+}
+
+i {
+  width: calc(210px / 30);
+  height: calc(70px / 10);
+}
+
+i:nth-child(n+1):nth-child(-n+30):hover ~ .bg {
+  --y: 10%;
+}
+
+i:nth-child(n+31):nth-child(-n+60):hover ~ .bg {
+  --y: 20%;
+}
+
+i:nth-child(n+61):nth-child(-n+90):hover ~ .bg {
+  --y: 30%;
+}
+
+i:nth-child(n+91):nth-child(-n+120):hover ~ .bg {
+  --y: 40%;
+}
+
+i:nth-child(n+121):nth-child(-n+150):hover ~ .bg {
+  --y: 50%;
+}
+
+i:nth-child(n+151):nth-child(-n+180):hover ~ .bg {
+  --y: 60%;
+}
+
+i:nth-child(n+181):nth-child(-n+210):hover ~ .bg {
+  --y: 70%;
+}
+
+i:nth-child(n+211):nth-child(-n+240):hover ~ .bg {
+  --y: 80%;
+}
+
+i:nth-child(n+241):nth-child(-n+270):hover ~ .bg {
+  --y: 90%;
+}
+
+i:nth-child(n+271):nth-child(-n+300):hover ~ .bg {
+  --y: 100%;
+}
+
+i:nth-child(30n+1):hover ~ .bg {
+  --x: 3.3333333333%;
+}
+
+i:nth-child(30n+2):hover ~ .bg {
+  --x: 6.6666666667%;
+}
+
+i:nth-child(30n+3):hover ~ .bg {
+  --x: 10%;
+}
+
+i:nth-child(30n+4):hover ~ .bg {
+  --x: 13.3333333333%;
+}
+
+i:nth-child(30n+5):hover ~ .bg {
+  --x: 16.6666666667%;
+}
+
+i:nth-child(30n+6):hover ~ .bg {
+  --x: 20%;
+}
+
+i:nth-child(30n+7):hover ~ .bg {
+  --x: 23.3333333333%;
+}
+
+i:nth-child(30n+8):hover ~ .bg {
+  --x: 26.6666666667%;
+}
+
+i:nth-child(30n+9):hover ~ .bg {
+  --x: 30%;
+}
+
+i:nth-child(30n+10):hover ~ .bg {
+  --x: 33.3333333333%;
+}
+
+i:nth-child(30n+11):hover ~ .bg {
+  --x: 36.6666666667%;
+}
+
+i:nth-child(30n+12):hover ~ .bg {
+  --x: 40%;
+}
+
+i:nth-child(30n+13):hover ~ .bg {
+  --x: 43.3333333333%;
+}
+
+i:nth-child(30n+14):hover ~ .bg {
+  --x: 46.6666666667%;
+}
+
+i:nth-child(30n+15):hover ~ .bg {
+  --x: 50%;
+}
+
+i:nth-child(30n+16):hover ~ .bg {
+  --x: 53.3333333333%;
+}
+
+i:nth-child(30n+17):hover ~ .bg {
+  --x: 56.6666666667%;
+}
+
+i:nth-child(30n+18):hover ~ .bg {
+  --x: 60%;
+}
+
+i:nth-child(30n+19):hover ~ .bg {
+  --x: 63.3333333333%;
+}
+
+i:nth-child(30n+20):hover ~ .bg {
+  --x: 66.6666666667%;
+}
+
+i:nth-child(30n+21):hover ~ .bg {
+  --x: 70%;
+}
+
+i:nth-child(30n+22):hover ~ .bg {
+  --x: 73.3333333333%;
+}
+
+i:nth-child(30n+23):hover ~ .bg {
+  --x: 76.6666666667%;
+}
+
+i:nth-child(30n+24):hover ~ .bg {
+  --x: 80%;
+}
+
+i:nth-child(30n+25):hover ~ .bg {
+  --x: 83.3333333333%;
+}
+
+i:nth-child(30n+26):hover ~ .bg {
+  --x: 86.6666666667%;
+}
+
+i:nth-child(30n+27):hover ~ .bg {
+  --x: 90%;
+}
+
+i:nth-child(30n+28):hover ~ .bg {
+  --x: 93.3333333333%;
+}
+
+i:nth-child(30n+29):hover ~ .bg {
+  --x: 96.6666666667%;
+}
+
+i:nth-child(30n+30):hover ~ .bg {
+  --x: 100%;
+}
+
+.bg {
+  position: absolute;
+  z-index: 10;
+  left: 0;
+  top: 0;
+  display: grid;
+  place-content: center;
+  width: 100%;
+  height: 100%;
+  grid-column: 1/span 30;
+  grid-row: 1/span 10;
+  transition: opacity 0.3s;
+  pointer-events: none;
+  text-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+i:hover ~ .bg {
+  background: radial-gradient(circle 110px at var(--x) var(--y), rgba(169, 242, 136, 0.4), rgba(169, 242, 136, 0));
+}
+
+
+

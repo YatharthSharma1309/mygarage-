@@ -1,0 +1,29 @@
+{% extends 'garage/base.html'%}
+{% block content %}
+
+
+
+test
+
+
+{% for c in cart %}
+    
+test
+   
+    {{c.vehicle}} <br>
+    {{c.service}} <br>
+    {{c.package}} <br>
+    ₹{{c.price_model}} <br>
+    <form action="/booking/{{c.vehicle.id}}/{{c.service}}/{{c.package}}/{{c.price_model.id}}" method='post' >{% csrf_token %}
+        <button type="submit" class="btn btn-success">Book Now</button>
+      </form>
+      <hr>
+
+    <br>
+  
+    {% endfor %}
+
+
+
+{% endblock content %}
+

@@ -1,0 +1,33 @@
+{% extends 'garage/base.html'%}
+{% block content %}
+
+
+
+
+<br>
+<br>
+<br>
+
+
+    {% for o in obj %}
+        {{o.user.username}}
+        {{o.vehicle.name}}
+        
+        <form action="service/services/{{o.vehicle.id}}" method='post' >{% csrf_token %}
+            <button type="submit" >Get Services</button>
+      
+          </form>
+        <br>
+        <hr>        
+        {% endfor %}
+
+</div>  
+
+
+
+{% endblock content %}
+
+
+
+
+
